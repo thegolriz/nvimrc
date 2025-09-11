@@ -13,4 +13,5 @@ vim.keymap.set("n", "<leader>so", function()
 end, { desc = "Reload current Lua module" })
 vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n","<leader>u", vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic" })
 
