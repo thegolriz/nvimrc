@@ -18,7 +18,7 @@ require("lazy").setup({
         "nvim-telescope/telescope.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
         keys = {
-            { "<leader>ae", function() require("telescope.builtin").diagnostics() end, desc = "Diagnostics" },
+            { "<leader>se", function() require("telescope.builtin").diagnostics() end, desc = "Diagnostics" },
             {"<leader>fe", function() require("telescope.builtin").diagnostics({bufnr = 0}) end, desc = "Local file diagnostics"},
         },
         config = function()
