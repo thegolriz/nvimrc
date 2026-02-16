@@ -32,7 +32,7 @@ require("lazy").setup({
         config = function()
             require("golriz.themes")
         end
-    },   
+    },
     {
         "nvim-treesitter/nvim-treesitter", 
         branch = "master", 
@@ -42,7 +42,7 @@ require("lazy").setup({
             require("nvim-treesitter.configs").setup({
                 ensure_installed = {
                     "c", "cpp", "lua", "vim", "vimdoc", "query",
-                    "markdown", "markdown_inline", "python", "javascript"
+                    "markdown", "markdown_inline", "python", "javascript","tsx"
                 },
                 sync_install = false,
                 auto_install = true,
@@ -57,7 +57,7 @@ require("lazy").setup({
                 },
                 indent = {
                     enable = true
-                }
+                },
             })
         end
     },
@@ -80,6 +80,29 @@ require("lazy").setup({
     {
         "mbbill/undotree"
     },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+        -- use opts = {} for passing setup options
+        -- this is equivalent to setup({}) function
+    },
+    {
+	    "L3MON4D3/LuaSnip",
+	    -- follow latest release.
+	    version = "v2.4.1", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	    -- install jsregexp (optional!).
+	    build = "make install_jsregexp"
+    },
+    {
+        "rafamadriz/friendly-snippets",
+        dependencies = { "L3MON4D3/LuaSnip" },
+    },
+    {
+        "stevearc/conform.nvim",
+          opts = {},
+    },
+
 
 })
 
